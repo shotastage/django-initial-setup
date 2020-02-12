@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='django-initial-setup',
-    version='0.0.2',
+    version='0.0.3',
     description='Django Initial Setup provides inital setup screen developed with Django for first launch.',
     long_description=open('README.md').read(),
     author='Shota Shimazu',

@@ -9,7 +9,7 @@ from django.contrib.auth import get_user_model
 class InitialSetupView(View):
 
     def get(self, request):
-        return render(request, 'initial.html')
+        return render(request, 'setup/initial.html')
 
 
     def post(self, request):
