@@ -1,1 +1,4 @@
 .vscode/
+dist/
+django_initial_setup.egg-info/
+build/

@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 mirage-django-lts = "*"
 pylint = "*"
+wheel = "*"
+twine = "*"
 
 [packages]
 django = "*"
