@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-include first_setup/static *
+recursive-include first_setup/templates *
+recursive-include docs *

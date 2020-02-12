@@ -1,8 +1,8 @@
 from setuptools import find_packages, setup
-
+from first_setup.version import version
 setup(
     name='django-initial-setup',
-    version='0.0.3',
+    version=version,
     description='Django Initial Setup provides inital setup screen developed with Django for first launch.',
     long_description=open('README.md').read(),
     author='Shota Shimazu',
@@ -12,7 +12,7 @@ setup(
     license='MIT',
     packages=find_packages(exclude=('tests')),
     install_requires=[
-        'django>=1.0',
+        'django>=2.0',
     ],
     extras_require={
     },
