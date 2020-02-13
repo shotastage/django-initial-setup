@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 
-
+from first_setup.db import DBSetup
 
 
 class WelcomeView(View):
@@ -39,3 +39,14 @@ class InitialSetupView(View):
         User.objects.create_superuser(username, email, password)
       
         return redirect('/login/')
+
+
+class DatabaseView(View):
+    def get(self, request):
+
+        db = DBSetup()
+
+        context = {
+            'cmd_result': db.migration_list()
+        }
+        return render(request, 'setup/db.html', context)
