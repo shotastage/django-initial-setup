@@ -6,15 +6,27 @@
 <div class="card border-secondary mb-3">
   <div class="card-body">
     <h1 class="card-title">Django Setup</h1>
-    <p class="card-text">
-      {{ cmd_result }}
-    </p>
-    <a
-      href="/initial_user_setup/superuser"
-      type="button"
-      class="btn btn-primary btn-lg"
-      >Migrate</a
-    >
+
+    <p>Here is migrations will apply: </p>
+
+    {% for line in cmd_result %}
+      <code>
+        <pre>
+          {{ line }}
+        </pre>
+      </code>
+    {% endfor %}
+
+    <p>Confirm migration list, press Migrate to apply migrations.</p>
+
+    <form method="post" role="form">{% csrf_token %}
+      <input name="button_name" type="hidden" value="apply"/>
+      <button type="submit" class="btn btn-primary btn-lg">
+        Apply Migration
+      </button>
+      <input name="next" type="hidden" value="{{ next }}" />
+    </form>
+
   </div>
 </div>
 {% endblock %}

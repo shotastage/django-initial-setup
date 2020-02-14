@@ -1,11 +1,25 @@
 import os
-import subprocess
+from subprocess import Popen, PIPE
 
 
 class DBSetup():
     
     def migration_list(self) -> str:
+        proc = Popen(
+            "python manage.py showmigrations",
+            shell=True,
+            stdout=PIPE, stderr=PIPE
+        )
+        proc.wait()    
+        res = proc.communicate()
 
-        out = subprocess.run(['python', 'manage.py', 'showmigrations'], shell=True, stdout=subprocess.PIPE)
+        return str(res[0]).split('b\'')[1].split('\\n')
 
-        return out.stdout
+
+    def migrate(self):
+        proc = Popen(
+            "python manage.py migrate",
+            shell=True,
+            stdout=PIPE, stderr=PIPE
+        )
+        proc.wait()
