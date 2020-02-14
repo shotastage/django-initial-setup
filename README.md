@@ -1,8 +1,10 @@
 # Django Initial Setup
 
+![scn1](./assets/scn1.png)
+
+
+
 Django Initial Setup provides inital setup screen developed with Django for first launch.
-
-
 
 ## Install
 
