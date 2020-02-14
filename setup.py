@@ -1,10 +1,13 @@
 from setuptools import find_packages, setup
 from first_setup.version import version
+
+
 setup(
     name='django-initial-setup',
     version=version,
     description='Django Initial Setup provides inital setup screen developed with Django for first launch.',
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     author='Shota Shimazu',
     author_email='hornet.live.mf@gmail.com',
     url='https://github.com/shotastage/django-initial-setup',

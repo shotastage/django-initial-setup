@@ -8,6 +8,11 @@ from first_setup.db import DBSetup
 from first_setup.decorators import first_user_only
 
 
+
+def redirectview(request):
+    return redirect('/initial_user_setup/welcome')
+
+
 class WelcomeView(View):
 
     @first_user_only
@@ -25,23 +30,6 @@ class WelcomeView(View):
       
         return redirect('/login/')
 
-
-class InitialSetupView(View):
-
-    @first_user_only
-    def get(self, request):
-        return render(request, 'setup/initial.html')
-
-    @first_user_only
-    def post(self, request):
-        username = request.POST["username"]
-        password = request.POST["password"]
-        email = request.POST["email"]
-
-        User = get_user_model()
-        User.objects.create_superuser(username, email, password)
-      
-        return redirect('/')
 
 
 class DatabaseView(View):
@@ -63,3 +51,21 @@ class DatabaseView(View):
         self.db.migrate()
 
         return redirect('/initial_user_setup/superuser')
+
+
+class InitialSetupView(View):
+
+    @first_user_only
+    def get(self, request):
+        return render(request, 'setup/initial.html')
+
+    @first_user_only
+    def post(self, request):
+        username = request.POST["username"]
+        password = request.POST["password"]
+        email = request.POST["email"]
+
+        User = get_user_model()
+        User.objects.create_superuser(username, email, password)
+      
+        return redirect('/')
