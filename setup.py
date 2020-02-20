@@ -13,7 +13,7 @@ setup(
     url='https://github.com/shotastage/django-initial-setup',
     download_url='https://pypi.python.org/pypi/django-initial-setup',
     license='MIT',
-    packages=find_packages(exclude=('tests', 'assets')),
+    packages=find_packages(exclude=('tests', 'assets', 'example')),
     install_requires=[
         'django>=2.0',
     ],

@@ -8,6 +8,7 @@ mirage-django-lts = "*"
 pylint = "*"
 wheel = "*"
 twine = "*"
+django-initial-setup = {path = "./dist/django_initial_setup-0.0.8-py3-none-any.whl"}
 
 [packages]
 django = "*"
