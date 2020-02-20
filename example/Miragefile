@@ -1,0 +1,36 @@
+{
+    "miragefile": "v0.0.4",
+
+    "project": {
+        "name": "initsetup",
+        "version": "0.0.1",
+        "author": "Shota Shimazu <hornet.live.mf@gmail.com>",
+        "git": "",
+        "license": "MIT",
+        "description": "Sample web application",
+
+        "django": {
+            "path": ".",
+            "module": "initsetup",
+            "package": "pipenv",
+            "database": "PostgreSQL"
+        },
+
+        "frontend": {
+            "path": "shell",
+            "package": "yarn",
+            "builder": "webpack"
+        },
+
+        "workspace": {
+            "path": ".mirage"
+        },
+
+        "copyright": {
+            "start_year": 2020,
+            "copyrightors": [
+                "Shota Shimazu"
+            ]
+        }
+    }
+}

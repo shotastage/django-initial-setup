@@ -4,3 +4,4 @@ django_initial_setup.egg-info/
 build/
 *.pyc
 .DS_Store
+db.sqlite3
