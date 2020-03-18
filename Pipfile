@@ -9,6 +9,13 @@ pylint = "*"
 wheel = "*"
 twine = "*"
 django-initial-setup = {path = "./dist/django_initial_setup-0.0.8-py3-none-any.whl"}
+pylint-django = "*"
+autopep8 = "*"
+flake8 = "*"
+
+[scripts]
+lint = "flake8 --show-source ."
+format = "autopep8 -ivr --aggressive --aggressive ."
 
 [packages]
 django = "*"
