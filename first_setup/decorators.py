@@ -9,9 +9,9 @@ def first_user_only(func):
 
         try:
             count = User.objects.all().count()
-        except:
+        except BaseException:
             count = 0
-        
+
         if count != 0:
             if settings.DEBUG:
                 return render(args[1], 'setup/error.html')
@@ -19,5 +19,5 @@ def first_user_only(func):
                 return HttpResponseNotFound()
         else:
             return func(*args, **kwargs)
-       
+
     return wrapper

@@ -46,11 +46,8 @@ class MirageConfig(ConfigScript):
         ]
     }
 
-
-
     def initialize(self) -> Void:
         mys.log("Mirage Setting Script v0.0.1")
-
 
     def main(self) -> int:
         # Add custom CLI script written in Python3
@@ -60,7 +57,6 @@ class MirageConfig(ConfigScript):
         # self.register_custom_command_with_runtime("custom-command", "tools/scripts/custom_script.rb", "ruby")
 
         return 0
-
 
     def deinitialize(self) -> Void:
         mys.log("Bye : )")
