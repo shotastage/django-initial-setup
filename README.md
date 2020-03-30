@@ -14,7 +14,14 @@ To install **django-initial-setup**, run following command if you use `pipenv`.
 pipenv install django-initial-setup
 ```
 
+After installing, add **first_setup** to `INSTALLED_APPS`.
 
+```
+INSTALLED_APPS = (
+    ...
+    'first_setup',
+)
+```
 
 ### Activate routing
 
