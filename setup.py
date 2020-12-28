@@ -15,7 +15,7 @@ setup(
     license='MIT',
     packages=find_packages(exclude=('tests', 'assets', 'example')),
     install_requires=[
-        'django>=2.0',
+        'django>=3.0',
     ],
     extras_require={
     },

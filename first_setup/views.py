@@ -37,8 +37,14 @@ class DatabaseView(View):
     @first_user_only
     def get(self, request):
 
+        migration_list: str = []
+
+        for line in self.db.migration_list():
+            if line != '\'':
+                migration_list.append(line)
+
         context = {
-            'cmd_result': self.db.migration_list()
+            'cmd_result': migration_list
         }
         return render(request, 'setup/db.html', context)
 
