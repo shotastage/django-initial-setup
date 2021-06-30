@@ -1,7 +1,10 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
 
 [dev-packages]
 mirage-django-lts = "*"
@@ -11,14 +14,11 @@ twine = "*"
 pylint-django = "*"
 autopep8 = "*"
 flake8 = "*"
-django-initial-setup = {path = "./dist/django_initial_setup-0.0.9-py3-none-any.whl"}
+django-initial-setup = {path = "./dist/django_initial_setup-0.1.0-py3-none-any.whl"}
 
 [scripts]
 lint = "flake8 --show-source ."
 format = "autopep8 -ivr --aggressive --aggressive ."
-
-[packages]
-django = "*"
 
 [requires]
 python_version = "3.9"
