@@ -1,5 +1,5 @@
 from setuptools import find_packages, setup
-from first_setup.version import version
+from fsetup.version import version
 
 
 setup(
@@ -24,6 +24,7 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 3.0',
         'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3.7',

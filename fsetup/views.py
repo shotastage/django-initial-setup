@@ -4,8 +4,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 
-from first_setup.db import DBSetup
-from first_setup.decorators import first_user_only
+from fsetup.db import DBSetup
+from fsetup.decorators import first_user_only
 
 
 def redirectview(request):

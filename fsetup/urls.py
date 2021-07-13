@@ -1,5 +1,5 @@
 from django.urls import path
-from first_setup.views import (
+from fsetup.views import (
     WelcomeView,
     InitialSetupView,
     DatabaseView,
