@@ -14,7 +14,7 @@ twine = "*"
 pylint-django = "*"
 autopep8 = "*"
 flake8 = "*"
-django-initial-setup = {path = "./dist/django_initial_setup-0.1.0-py3-none-any.whl"}
+django-initial-setup = {path = "./dist/django_initial_setup-0.1.1-py3-none-any.whl"}
 
 [scripts]
 lint = "flake8 --show-source ."

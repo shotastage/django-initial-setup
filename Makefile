@@ -17,4 +17,4 @@ test:
 	rm -rf build/
 	python setup.py sdist bdist_wheel
 	pipenv uninstall django-initial-setup
-	pipenv install -d ./dist/django_initial_setup-0.1.0-py3-none-any.whl
+	pipenv install -d ./dist/django_initial_setup-0.1.1-py3-none-any.whl
